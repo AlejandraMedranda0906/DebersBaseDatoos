@@ -5,9 +5,8 @@
 <img src="./capturas_tasbd/001db.jpg" alt="drawing" width="500"/>
 
 ## 2.En la venta de herramienta de consulta (Query Tool) creo las tablas en base a mi diagrama.
-  - Sentencia:
-
-  ```
+  
+```
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
   firstName VARCHAR(255) NOT NULL,
@@ -17,6 +16,9 @@ CREATE TABLE users (
   updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+  ```
+
+  ```
 CREATE TABLE devices (
   id SERIAL PRIMARY KEY,
   code VARCHAR(255) NOT NULL,
@@ -28,6 +30,9 @@ CREATE TABLE devices (
   updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+  ```
+
+  ```
 CREATE TABLE registers (
   id SERIAL PRIMARY KEY,
   usageTime TIMESTAMP NOT NULL,
@@ -41,7 +46,7 @@ CREATE TABLE registers (
 
   - Captura:
 
-<img src="./capturas_tasbd/002bd.jpg" alt="drawing" width="500"/>
+<img src="./capturas_tasbd/002bd.png" alt="drawing" width="500"/>
 
 ## 3. Ejecuto el código.
 
@@ -55,12 +60,10 @@ CREATE TABLE registers (
   ```
   - Captura:
 
-<img src="./capturas_tas12/03.jpg" alt="drawing" width="500"/>
+<img src="./capturas_tasbd/003bd.png" alt="drawing" width="500"/>
 
 
-# TAS12 - Subconsultas-event_db
-## 1. Crear dos ejemplo con la base de datos event. Uno con subconsulta en SELECT. 
-### Listar todos los miembros junto con el número de conferencias a las que se han registrado.
+## 3. verifico en “schemas” y en “tables” que este creado.
   - Sentencia:
   ```
   SELECT
