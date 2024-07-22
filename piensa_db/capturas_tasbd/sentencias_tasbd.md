@@ -42,28 +42,57 @@ CREATE TABLE registers (
   deviceId INT REFERENCES devices(id)
 );
 
+
   ```
 
   - Captura:
 
 <img src="./capturas_tasbd/002bd.png" alt="drawing" width="500"/>
 
-## 3. Ejecuto el código.
+# 3. Ejecuto el código.
 
-  - Sentencia:
+```
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  firstName VARCHAR(255) NOT NULL,
+  lastName VARCHAR(255) NOT NULL,
+  age INT NOT NULL,
+  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
   ```
-  SELECT i.create_at AS fecha_factura, i.total
-  FROM
-  invoice i
-  WHERE i.total > (SELECT AVG(total) FROM invoice);
 
   ```
-  - Captura:
+CREATE TABLE devices (
+  id SERIAL PRIMARY KEY,
+  code VARCHAR(255) NOT NULL,
+  capacityBattery INT NOT NULL,
+  design VARCHAR(255) NOT NULL,
+  model VARCHAR(255) NOT NULL,
+  totalUse INT DEFAULT 0,
+  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+ ```
+```
+CREATE TABLE registers (
+  id SERIAL PRIMARY KEY,
+  usageTime TIMESTAMP NOT NULL,
+  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  userId INT REFERENCES users(id),
+  deviceId INT REFERENCES devices(id)
+);
 
-<img src="./capturas_tasbd/003bd.png" alt="drawing" width="500"/>
+  ```
+
+ - Captura:
+
+<img src="./capturas_tasbd/0033bd.png" alt="drawing" width="500"/>
 
 
-## 3. verifico en “schemas” y en “tables” que este creado.
+## 4. Ejecuto un nuevo código para mas adelante llamar al trigger.
   - Sentencia:
   ```
   SELECT
@@ -78,7 +107,7 @@ CREATE TABLE registers (
   ```
   - Captura:
 
-<img src="./capturas_tas12/04.jpg" alt="drawing" width="500"/>
+<img src="./capturas_tas12/0bd.png" alt="drawing" width="500"/>
 
 ## 2. subconsulta  en WHERE
 ### Listar los eventos donde el total de asistentes es mayor que el número promedio de asistentes en todos los eventos.
@@ -99,5 +128,5 @@ CREATE TABLE registers (
   ```
   - Captura:
 
-<img src="./capturas_tas12/05.jpg" alt="drawing" width="500"/>
+<img src="./capturas_tas12/.jpg" alt="drawing" width="500"/>
 
