@@ -1,23 +1,39 @@
 # TAS11 - Views projects
 ## 1. Crear las siguientes views en el proyecto invoice.
-## Primer VIEW.
+## invoice_VIEW.
   - Sentencia:
   ```
   CREATE VIEW invoice_view AS
   SELECT
-   i.id,
-   i.code,
-   i.create_at,
-   i.total,
-   c.fullname
-  FROM invoice i
-  JOIN client c ON i.client_id = c.id;
+  i.id,
+  i.code,
+  i.create_at,
+  i.total,
+  c.fullname
+  FROM 
+  invoice i
+  JOIN 
+  client c ON i.client_id = c.id;
   ```
   - Captura:
 
-<img src="./capturas_tas11/sentence_01.png" alt="drawing" width="500"/>
+<img src="./capturas_tas11/view01.jpg" alt="drawing" width="500"/>
+  ```
+  CREATE VIEW invoice_view AS
+  SELECT
+  i.id,
+  i.code,
+  i.create_at,
+  i.total,
+  c.fullname
+  FROM 
+  invoice i
+  JOIN 
+  client c ON i.client_id = c.id;
+  ```
+  - Captura:
 
-<img src="./capturas_tas11/sentence_01.1.png" alt="drawing" width="500"/>
+<img src="./capturas_tas11/view02.jpg" alt="drawing" width="500"/>
 
 ## 2. Segundo VIEW.
   - Sentencia:
