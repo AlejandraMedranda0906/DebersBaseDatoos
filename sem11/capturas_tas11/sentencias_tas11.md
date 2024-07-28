@@ -19,7 +19,7 @@
 
 <img src="./capturas_tas11/view01.jpg" alt="drawing" width="500"/>
   ```
- SELECT * FROM invoice view
+  SELECT * FROM invoice view
   ```
   - Captura:
 
@@ -45,10 +45,10 @@
 
 <img src="./capturas_tas11/view03.jpg" alt="drawing" width="500"/>
 
- - Sentencia:
+  - Sentencia:
   ```
   SELECT * FROM detail view
 
   ```
-   - Captura:
+  - Captura:
 <img src="./capturas_tas11/view04.jpg" alt="drawing" width="500"/>
