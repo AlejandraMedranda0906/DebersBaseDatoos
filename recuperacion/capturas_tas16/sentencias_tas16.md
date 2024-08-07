@@ -96,6 +96,9 @@
 - Captura:
 
 <img src="./capturas_tas16/img18.jpg"alt="drawing" width="500"/>
+
+- Captura:
+
 <img src="./capturas_tas16/img19.jpg"alt="drawing" width="500"/>
 
 
