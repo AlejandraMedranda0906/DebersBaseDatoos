@@ -65,7 +65,11 @@
 - Captura:
 
 <img src="./capturas_tas16/img16.jpg"alt="drawing" width="500"/>
+- Captura:
+
 <img src="./capturas_tas16/rutina17.jpg"alt="drawing" width="500"/>
+- Captura:
+
 <img src="./capturas_tas16/img17.jpg"alt="drawing" width="500"/>
 
 
