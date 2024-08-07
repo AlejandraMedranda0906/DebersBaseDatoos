@@ -57,9 +57,10 @@
     (1, 'Flexiones', 'http://example.com/dominadasfemenino'),
     (2, 'Bailes', 'http://example.com/dominadas');
 
-    INSERT INTO Routine_exercise (id, series, repetitions, routine_id, exercise_id) VALUES 
+    INSERT INTO Routine_exercise (id, series, repetitions, rutine_id, exercise_id) VALUES 
     (1, 3, 12, 1, 1),
     (2, 4, 10, 2, 2);
+
 
 
 
@@ -67,8 +68,8 @@
   - Captura:
 
 <img src="./capturas_tas16/img16.jpg"alt="drawing" width="500"/>
-<img src="./capturas_tas16/rutine17.jpg"alt="drawing" width="500"/>
-<img src="./capturas_tas16/img16.jpg"alt="drawing" width="500"/>
+<img src="./capturas_tas16/rutina17.jpg"alt="drawing" width="500"/>
+<img src="./capturas_tas16/img17.jpg"alt="drawing" width="500"/>
 
 
 
@@ -76,25 +77,26 @@
 
   - Sentencia:
   ```
-    CREATE VIEW CompleteRoutine AS
+   CREATE VIEW CompleteRoutine AS
     SELECT 
-    r.id AS routine_id,
+    r.id AS rutine_id,
     r.description,
     e.id AS exercise_id,
     e.detail,
     re.series,
     re.repetitions
     FROM 
-    Routine r
+    Rutine r
     JOIN 
-    Routine_exercise re ON r.id = re.routine_id
+    Routine_exercise re ON r.id = re.rutine_id
     JOIN 
     Exercise e ON re.exercise_id = e.id;
+
 
 
   ```
   - Captura:
 
-<img src="./capturas_tas16/trigger_01.jpg"alt="drawing" width="500"/>
+<img src="./capturas_tas16/img18.jpg"alt="drawing" width="500"/>
 
 
